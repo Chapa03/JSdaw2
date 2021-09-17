@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ejemplo de typeof</title>
+	<script type="text/javascript">
+		var booleano = true;
+		var numerico = 26;
+		var comaFlotante = 12.56;
+		var texto = "mi texto";
+		//Fecha y hora de la ejecución de esta línea
+		var fecha = new Date(); 
+		var indefinida;
+		//document.write escribe en el propio documento
+		document.write("<br>El tipo de dato de booleano es: " + typeof(booleano));
+		document.write("<br>El tipo de dato de numerico es: " + typeof(numerico));
+		document.write("<br>El tipo de dato de comaFlotante es: " + typeof(comaFlotante));
+		document.write("<br>El tipo de dato de texto es: " + typeof(texto));
+		document.write("<br>El tipo de dato de fecha es: " + typeof(fecha));
+		document.write("<br>El tipo de dato de indefinida es: " + typeof(indefinida));
+
+		numerico = "Holiiii";
+		document.write("<br>El tipo de dato de numerico después de sobrescribir su contenido por un String es: " + typeof(numerico));
+	</script>
+</head>
+	<body>
+
+	</body>
+</html>
