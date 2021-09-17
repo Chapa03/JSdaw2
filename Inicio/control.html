@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sentencias de control</title>
+</head>
+<body>
+	<p>Dadas las variables a = "1", b = 1 y c = 2:</p>
+	<br>
+	<p id="p1"></p>
+	<p id="p2"></p>
+	<p id="p3"></p>
+
+	<script type="text/javascript">
+		var a = "1";
+		var b = 1;
+		var c = 2;
+		
+		if (a == b) {
+			document.getElementById("p1").innerHTML = "a es igual a b en valor";
+		} else {
+			document.getElementById("p1").innerHTML = "a no igual a b en valor";
+		}
+
+		if (a === b) {
+			document.getElementById("p2").innerHTML = "a es igual a b en valor y en tipo de dato";
+		} else {
+			document.getElementById("p2").innerHTML = "a NO igual a b en valor o en tipo de dato";
+		}
+
+		if (c >= a) {
+			document.getElementById("p3").innerHTML = "c es mayor que a";
+		} else {
+			document.getElementById("p3").innerHTML = "c NO es mayor que a";
+		}
+	</script>
+</body>
+</html>
