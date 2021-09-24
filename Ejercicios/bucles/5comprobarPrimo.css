@@ -1,0 +1,11 @@
+strong {
+	font-family: Verdana, sans-serif;
+	text-shadow: 2px 2px 3px #5fc0b5;
+	color: #2e9599;
+}
+
+button {
+	color: #ffffff;
+	background-color: #204653;
+	border-radius: 4px;
+}
