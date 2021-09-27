@@ -9,3 +9,7 @@ button {
 	background-color: #204653;
 	border-radius: 4px;
 }
+
+body {
+	font-family: Verdana, sans-serif;
+}

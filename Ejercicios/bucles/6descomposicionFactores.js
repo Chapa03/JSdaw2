@@ -1,12 +1,12 @@
 function hallarFactores(){
 	var n = parseInt(document.getElementById("numero").value);
-	var operar = true;
 	var primos = "";
+	var aux = n;
 
-	for (int i = 2; i <= n; i++){
-		if (n % i == 0){
-			primos += "" i + " x ";
-			n /= i; 
+	for (var i = 2; i <= n; i++){
+		while (aux % i == 0){
+			primos += (primos == "") ? "" + i : " * " + i;
+			aux = aux / i; 
 		}
 	}
 	document.getElementById("respuesta").innerHTML = primos;
