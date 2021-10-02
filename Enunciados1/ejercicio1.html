@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicios hoja</title>
+
+</head>
+<body>
+	<script type="text/javascript" >
+		//Crear la variable fechaHoy con fecha de hoy y mostrarla
+		var fechaHoy = new Date();
+		document.write("fechaHoy mostrando la fecha de hoy: <br/>" + fechaHoy + "<br/><br/>");
+
+		//Crear la variable fecha85 que sume 85 días a la variable fechaHoy y mostrarla
+		var fecha85 = new Date();
+		fecha85.setDate(fechaHoy.getDate() + 85);
+		document.write("fecha85 mostrando la fecha de hoy + 85 días: <br/>" + fecha85 + "<br/><br/>");
+
+		//Crear la variable fecha187 que reste 187 días a la variable
+		var fecha187 = new Date();
+		fecha187.setDate(fechaHoy.getDate() - 187);
+		document.write("fecha187 mostrando la fecha de hoy - 187 días: <br/>" + fecha187 + "<br/><br/>");
+
+		//Sumar 2 años a la variable fecha85 y mostrarla.
+		fecha85.setFullYear(fecha85.getFullYear() + 2);
+		document.write("fecha85 + 2 años: <br/>" + fecha85 + "<br/><br/>");
+
+		//Restar 24 horas a la variable fecha187 y mostrarla
+		fecha187.setHours(fecha187.getHours() - 24);
+		document.write("fecha187 - 24 horas: <br/>" + fecha187 + "<br/><br/>");
+
+		//Crear la variable fechaResto que sea la resta de fecha85 - fecha187 y observa lo que obtienes y mostrarla
+		var fechaResto = new Date(fecha85 - fecha187);
+		//var diaResto = fechaResto.getDate
+		document.write("fechaResto mostrando la diferencia entre fecha85 y fecha187 (desde 1970): <br/>" + fechaResto);
+
+
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
