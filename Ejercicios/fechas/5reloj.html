@@ -3,11 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>Reloj automático</title>
+	<link rel="stylesheet" type="text/css" href="5reloj.css">
 	<script type="text/javascript" src="5reloj.js"></script>
 </head>
 <body>
-	<button type="button" onclick="mostrarHora();">Mostrar hora</button>
-	<button type="button" onclick="pararHora();">Parar reloj</button>
+	<div id="botones">
+		<button type="button" id="timerOn" onclick="mostrarHora();">Mostrar hora</button>
+		<button type="button" id="timerOff" onclick="pararHora();" disabled="true">Parar reloj</button>
+	</div>
 	<div id="hora"></div>
 </body>
 </html>
