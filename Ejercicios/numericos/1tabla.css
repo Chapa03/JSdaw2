@@ -1,0 +1,17 @@
+body {
+	background-color: #A2DED8;
+	font-family: Verdana;
+}
+
+table {
+	text-shadow: 1px 1px 1px #364A37;
+}
+
+th {
+	color: #BCFF3F;
+	margin-left: 10px;
+}
+
+td {
+	color: #B7FABA;
+}
