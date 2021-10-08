@@ -1,0 +1,29 @@
+body {
+	font-family: 'Verdana';
+	color: #85A392;
+	/*text-shadow: 1px 1px 1px #85A392;*/
+	background-color: #FDD998;
+	line-height: 1.5em;
+}
+
+.entrada {
+	color: #85A392;
+	width: 10em;
+	border: 0px;
+	border-radius: 5px;
+	padding: 4px;
+	background-color: #FFECC7;
+}
+
+.boton {
+	background-color: #85A392;
+	color: #FFECC7;
+	padding: 10px;
+	margin: 6px;
+	border-radius: 4px;
+	border: 0px;
+}
+
+
+
+

@@ -4,25 +4,27 @@
 	<meta charset="utf-8">
 	<title></title>
 	<script type="text/javascript" src="2random5.js"></script>
+	<link rel="stylesheet" type="text/css" href="2random5.css">
 </head>
 <body>
 	<label for="menor">Número menor</label>
-	<input type="number" name="menor" id="menor">
+	<input type="number" class="entrada" name="menor" id="menor">
 	<br/>
 	<label for="mayor">Número mayor</label>
-	<input type="number" name="mayor" id="mayor">
+	<input type="number" class="entrada" name="mayor" id="mayor">
 	<br/>
 	<label for="cantidad">¿Cuántos números quieres generar?</label>
 	<br/>
-	<input type="number" name="cantidad" id="cantidad">
+	<input type="number" class="entrada" name="cantidad" id="cantidad">
 	<br/>
-	<input type="checkbox" id="repetidos" name="repetidos" value="repetido">
+	<input type="checkbox" class="chck" id="repetidos" name="repetidos" value="repetido">
 	<label for="repetidos">Permitir repetidos</label>
 	<br/>
-	<input type="checkbox" id="ordenados" name="ordenados" value="ordenado">
+	<input type="checkbox" class="chck" id="ordenados" name="ordenados" value="ordenado">
 	<label for="ordenados">Mostrar ordenados</label>
 	<br/>
-	<button type="button" onclick="generar();">Generar números</button>
+	<button type="button" class="boton" onclick="generar();">Generar números</button>
+	<br/>
 	<br/>
 	<div id="resultado"></div>
 </body>
