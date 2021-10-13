@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Letrero</title>
+	<script type="text/javascript" src="1letrero.js"></script>
+	<link rel="stylesheet" type="text/css" href="1letrero.css">
+</head>
+<body>
+	<div class="superior">
+		<label for="texto" id="etiqueta">Texto: </label>
+		<br/>
+		<input type="text" name="texto" id="texto">
+	</div>
+	<div class="empezar">
+		<button type="button" id="rotarDerecha" onclick="rotar(0);">Rotar a la derecha</button>
+		<button type="button" id="rotarIzquierda" onclick="rotar(1);">Rotar a la izquierda</button>
+		<br/>
+	</div>
+	<div class="parar">
+		<button type="button" id="stopDerecha" onclick="parar();">Parar rotación derecha</button>
+		<button type="button" id="stopIzquierda" onclick="parar();">Parar rotación izquierda</button>
+	</div>
+	<div id="respuesta"></div>
+</body>
+</html>
