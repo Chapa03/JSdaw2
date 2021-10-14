@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 1</title>
+	<script type="text/javascript" src="ejercicio01.js"></script>
+</head>
+<body>
+	<!-- Crear un interfaz que convierta las primeras letras de un nombre y dos apellidos introducidos por teclado en mayúsculas, y el resto en minúsculas. El usuario puede introducirlo en el formato que quiera. -->
+	<label for="nombre">Nombre: </label>
+	<input type="text" name="nombre" id="nombre">
+	<br/>
+	<label for="apellido1">Apellido 1: </label>
+	<input type="text" name="apellido1" id="ape1">
+	<br/>
+	<label for="apellido2">Apellido 2: </label>
+	<input type="text" name="apellido2" id="ape2">	
+	<br/> 
+	<button type="button" onclick="convertir();">Formatear</button>
+	<div id="respuesta"></div>
+</body>
+</html>
