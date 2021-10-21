@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<!-- Crear una aplicación que muestre:
+			URL completa:
+			Pathname:
+			Protocolo:
+			Puerto:
+			Servidor:
+			Host Name:
+			Además implementar tres botones.
+			Uno para recargar la página.
+			Otro para redireccionar a otra página. (google)
+			El último para reemplazar la página por otra. (nasa) -->
+	<h1>Información:</h1>
+	&nbsp;&nbsp;&nbsp;&nbsp;URL Completa: <label id="urlCompleta"></label><br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;Pathname: <label id="pathname"></label><br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;Protocolo: <label id="protocolo"></label><br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;Puerto: <label id="puerto"></label><br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;Servidor: <label id="servidor"></label><br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;Host name: <label id="hostName"></label><br/>
+	<br/>
+	<button type="button" value="Recargar" onclick="location.reload();">Recargar</button>
+	<button type="button" value="Redireccionar" onclick="redireccionar();">Redireccionar</button>
+	<button type="button" onclick="reemplazar();">Reemplazar</button>
+	<script type="text/javascript" src="ejercicioLocation.js"></script>
+</body>
+</html>
