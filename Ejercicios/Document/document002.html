@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objeto Document</title>
+</head>
+<body>
+
+<!-- 	Imagenes - Camino y tamaño
+		Enlaces - dirección y modo de apertura
+		Formulario - Nombre, metodo de envío, fichero de envío
+		Número de imégenes
+		Núumero de enlaces
+		-->
+<form name="form5" method="POST">
+Máximo 50 caracteres: <input type="text" name="campo" size="50" onKeypress="return contar(this.form)"><br>
+Escritos: <input type="text" ReadOnly name="escritos" size="2" value="0"> 
+Restantes: <input type="text" ReadOnly name="restantes" size="2" value="50">
+</form>
+<a href="http:\\www.nasa.es" target="_blank">Nasa</a>
+<form name="ejemplo6" method="GET" action="ejemplos/ej6.asp" target="_blank">
+Por favor, complete su domicilio:<br>
+<br>
+Calle: <input type="text" name="calle" size="40"> 
+Nro.: <input type="text" name="nro" size="3"><br>
+Piso: <input type="text" name="piso" size="2"> 
+Departamento: <input type="text" name="dto" size="2"><br>
+Código Postal: <input type="text" name="cp" size="8"> 
+Ciudad: <input type="text" name="ciudad" size="20"> 
+País: <input type="text" name="pais" size="20"><br><br>
+Verifique su domicilio: <textArea name="domicilio" size="80" ReadOnly  cols=50 rows=9></textarea>
+<br>
+Si los datos no son correctos, <a onClick="ejemplo6.domicilio.value=''" style="cursor: help">
+presione aquí</a> y realice los cambios en los campos correspondientes.<br>
+<input type="button" value="Confirmar" onclick="completar(this.form)">
+</form>
+<a href="http:\\www.google.es" target="_self"> Google</a>
+</br>
+<img src="imagenes/uno.jpg" width=100 height=90></img>
+<img src="imagenes/dos.jpg" width=90 height=100></img>
+<img src="imagenes/tres.jpg" width=100 height=95></img>
+<img src="imagenes/cuatro.jpg" width=95 height=100></img>
+<br>
+<div id="miDiv"></div>
+<script src="document000.js"></script>
+</body>
+</html>		
