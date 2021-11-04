@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ejercicio05moverRedim.js"></script>
+    <title>Mover y redimensionar</title>
+</head>
+<body>
+    <button type="button" onclick="mover();">Mover</button><br/>
+    <button type="button" onclick="resize();">Redimensionar</button><br/>
+    <button type="button" onclick="moveResize();">Mover y redimensionar</button><br/><br/>
+    <label>Coordenadas:</label><br/>
+    <label for="top">Top (px):</label>
+    <input type="text" id="top" oninput="boton();"><br/>
+    <label for="left">Left (px):</label>
+    <input type="text" id="left"oninput="boton();"><br/>
+    <input type="button" id="boton" onclick="abrirEn();" value="Abrir en:"/>
+</body>
+</html>
