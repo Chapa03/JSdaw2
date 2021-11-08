@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegador de ARRAYS</title>
+</head>
+<body>
+    <div id="disp"></div>
+    <button id="primero" type="button" onclick="primero();" title="Primer elemento">&lt;&lt;</button>
+    <button id="anterior" type="button" onclick="anterior();" title="Anterior">&lt;</button>
+    <input type="text" name="actual" id="actual" size="5" disabled="disabled"/>
+    <button id="siguiente" type="button" onclick="siguiente();" title="Siguiente">&gt;</button>
+    <button id="ultimo" type="button" onclick="ultimo();" title="Último elemento">&gt;&gt;</button>
+    <br/>
+    <br/>
+    <button type="button" id="alta" onclick="alta();">Alta</button>
+    <button type="button" id="baja" onclick="baja();">Baja</button>
+    <button type="button" id="modificar" onclick="modificar();">Modificar</button>
+    <button type="button" id="listado" onclick="listar();">Listado</button>
+    <br/>
+    <br/>
+    <label for="asc">ORDEN ASCENDENTE:</label>
+    <br/>
+    <input type="text" id="asc" size="40" disabled="disabled"/>
+    <br/>
+    <br/>
+    <label for="desc">ORDEN DESCENDENTE:</label>
+    <br/>
+    <input type="text" id="desc" size="40" disabled="disabled"/>
+    <br/>
+    <br/>
+    <button type="button" id="btn" onclick="aceptar();" hidden="hidden">Aceptar</button>
+    <script src="ejercicio01array.js"></script>
+</body>
+</html>
