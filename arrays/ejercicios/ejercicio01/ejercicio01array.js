@@ -1,12 +1,16 @@
 let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+//copia del array para utilizar en el display
 let aux = numeros.slice();
+//copia del array para ordenar ascendente y descendente
 let orden = numeros.slice();
 var idx = 0;
 var accion = 'normal';
 
+//ordenar el array en pantalla
 document.getElementById('asc').value = orden.sort(compareForSortAsc);
 document.getElementById('desc').value = orden.sort(compareForSortDesc);
 
+//añadir un elemento más a la copia para el display
 aux.push(0);
 
 document.getElementById('actual').value = numeros[idx];
@@ -19,6 +23,11 @@ function primero() {
 }
 
 function anterior() {
+    /**
+     * si la acción es 'alta' el array que itera es el auxiliar
+     * para simular la posición del nuevo elemento entre los
+     * ya exixtentes del array
+     */
     if (accion == 'alta'){
         if (idx != 0){
             idx -= 1;
@@ -37,6 +46,11 @@ function anterior() {
 }
 
 function siguiente() {
+    /**
+     * si la acción es 'alta' el array que itera es el auxiliar
+     * para simular la posición del nuevo elemento entre los
+     * ya exixtentes del array
+     */
     if (accion == 'alta') {
         if (idx != aux.length - 1){
             idx += 1;
@@ -55,6 +69,11 @@ function siguiente() {
 }
 
 function ultimo() {
+    /**
+     * Si la acción es 'alta', el valor de idx será el último
+     * índice del array auxiliar, sino, el último índice del
+     * array numeros
+     */
     idx = (accion == 'alta') ? aux.length - 1 : numeros.length - 1;
     document.getElementById('actual').value = numeros[idx];
     mostrarDisplay();
@@ -140,6 +159,7 @@ function aceptar() {
         document.getElementById('actual').value = numeros[idx];
         accion = 'normal';
     }
+    //copia del array original y orden por pantalla ascendente y descendente
     orden = numeros.slice();
     document.getElementById('asc').value = orden.sort(compareForSortAsc);
     document.getElementById('desc').value = orden.sort(compareForSortDesc);
@@ -153,6 +173,16 @@ function compareForSortDesc(a,b){
     return (b-a);
 }
 
+/**
+ * Maneja toda la lógica del display moviendo el cursor
+ * inactivo 'O', el de alta '^', el de nuevo elemento 'o'
+ * o el de baja 'X' por todos los demás elementos '|'.
+ * En el alta, añade un elemento más utilizando el cursor '^'
+ * simulando la posición en la que quedaría el nuevo elemento
+ * dentro del array.
+ * En la baja, señala la posición del elemento que está seleccionado
+ * para borrarse.
+ */
 function mostrarDisplay(){
     var disp = '';
     if (accion == 'normal') {
@@ -160,14 +190,9 @@ function mostrarDisplay(){
             disp += (i == idx) ? 'O&nbsp;&nbsp;' : '|&nbsp;&nbsp;';
         }
     } else if (accion == 'alta') {
-        if (idx != aux.length - 1) {
-            for (var i = 0; i <= aux.length - 1; i++) {
-                disp += (i == idx) ? '^&nbsp;&nbsp;' : '|&nbsp;&nbsp;';
-            }
-        } else {
-            for (var i = 0; i <= aux.length - 1; i++) {
-                disp += (i == idx) ? '^&nbsp;&nbsp;' : '|&nbsp;&nbsp;';
-            }
+        for (var i = 0; i <= aux.length - 1; i++) {
+            //Pinta ^ para el índice, y | para el resto de elementos
+            disp += (i == idx) ? '^&nbsp;&nbsp;' : '|&nbsp;&nbsp;';
         }
         document.getElementById('actual').value = 'idx.' + idx;
     } else if (accion == 'aceptar') {
