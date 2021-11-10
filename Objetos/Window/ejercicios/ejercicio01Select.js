@@ -6,7 +6,7 @@ var codigo = '<select name="color" id="color">' +
                 '<option value="4">Azul</option>' + 
             '</select>' +
             '<button type="button" onclick="cambiarColor();">Cambiar color</button>' +
-            '<script src="ejercicioSelect.js"></script>';
+            '<script src="ejercicio01Select.js"></script>';
 function abrir() {
 //    ventana = window.open("", "Ventana", "top=150,left=150,width=300,height=250");
 //    varVentana.document.open();

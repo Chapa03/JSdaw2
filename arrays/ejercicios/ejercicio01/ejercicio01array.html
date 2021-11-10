@@ -14,24 +14,28 @@
     <button id="siguiente" type="button" onclick="siguiente();" title="Siguiente">&gt;</button>
     <button id="ultimo" type="button" onclick="ultimo();" title="Último elemento">&gt;&gt;</button>
     <br/>
+    <span id="adv"></span>
     <br/>
     <button type="button" id="alta" onclick="alta();">Alta</button>
     <button type="button" id="baja" onclick="baja();">Baja</button>
     <button type="button" id="modificar" onclick="modificar();">Modificar</button>
+    <!--VENTANA NUEVA PARA EL LISTADO
+    orden normal, ascendente y descendente-->
     <button type="button" id="listado" onclick="listar();">Listado</button>
     <br/>
     <br/>
-    <label for="asc">ORDEN ASCENDENTE:</label>
+    <label for="asc">Orden ascendente:</label>
     <br/>
     <input type="text" id="asc" size="40" disabled="disabled"/>
     <br/>
     <br/>
-    <label for="desc">ORDEN DESCENDENTE:</label>
+    <label for="desc">Orden descendente:</label>
     <br/>
     <input type="text" id="desc" size="40" disabled="disabled"/>
     <br/>
     <br/>
     <button type="button" id="btn" onclick="aceptar();" hidden="hidden">Aceptar</button>
+    <button type="button" id="btnCancel" onclick="cancelar();" hidden="hidden">Cancelar</button>
     <script src="ejercicio01array.js"></script>
 </body>
 </html>
