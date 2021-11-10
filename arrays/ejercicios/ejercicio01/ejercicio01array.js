@@ -155,8 +155,7 @@ function aceptar() {
         } else if (accion == 'baja') {
             respuesta = confirm('¿Deseas dar de baja el valor [' + idx + '] - ' + numero + '?');
             if (respuesta) {
-                numeros.splice(idx,1);
-                idx = (idx == numeros.length - 1) ? numeros.length - 1 : idx;
+                numeros.splice(idx--,1);
                 aux.pop();
             } else {
                 mostrarDisplay();
