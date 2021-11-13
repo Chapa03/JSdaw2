@@ -102,9 +102,15 @@ function modificar() {
 }
 
 function listar() {
-    var ventanaListar = window.open("", "Visor del array", "top=100,left=250,width=350,height=250");
+    var ventanaListar = window.open("", "Visor del array", "top=75,left=850,width=350,height=675");
     orden = numeros.slice();
+    var tabla = '';
+    for (var i = 0; i < numeros.length; i++) {
+        tabla += '<tr><td>' + numeros[i] + '</td><td>' + orden.sort(compareForSortAsc)[i] + '</td><td>' + orden.sort(compareForSortDesc)[i] + '</td></tr>'
+    }
+
     var codigo = '<body>'
+                + '<h2>Listado:</h2>'
                 + '<label for="n">Array original:</label>'
                 + '<br/>'
                 + '<input type="text" id="n" size="40" disabled="disabled"/>'
@@ -118,6 +124,9 @@ function listar() {
                 + '<label for="d">Orden descendente:</label>'
                 + '<br/>'
                 + '<input type="text" id="d" size="40" disabled="disabled"/>'
+                + '<br/>'
+                + '<h2>Tabla:</h2>'
+                + '<table border=1><tr><th>Array</th><th>Orden Ascendente</th><th>Orden Descendente</th></tr>' + tabla + '</table>'
                 + '<br/>'
                 + '<br/>'
                 + '<input type="button" id="btn" onclick="window.close();" value="Cerrar ventana"/>'
