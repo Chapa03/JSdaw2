@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<head>
+  <title>Carrusell de imagenes</title>
+    <meta charset=”UTF-8" /> 
+ </head>
+ <body >
+<div id="demo"></div>    
+	
+</body>
+ <script>
+class Car {
+constructor(brand) {
+ this.carname = brand;
+}
+get cnam() {
+ return this.carname;
+}
+set cnam(x) {
+ this.carname = x;
+}
+}
+mycar = new Car("Ford");
+document.getElementById("demo").innerHTML = mycar.cnam;
+mycar.cnam="Audi";
+document.getElementById("demo").innerHTML += "<br>" +mycar.cnam;
+
+
+</script>
+</html>

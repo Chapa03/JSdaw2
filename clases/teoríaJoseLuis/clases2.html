@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<head>
+  <title>Carrusell de imagenes</title>
+    <meta charset=”UTF-8" /> 
+ </head>
+ <body >
+<div id="demo"></div>    
+	
+</body>
+ <script>
+class Car {
+constructor(brand) {
+ this.carname = brand;
+}
+static hello() {
+ return "Hello!!";
+}
+}
+var mycar = new Car("Seat");
+var miCoche = new Car("Dacia");
+document.getElementById("demo").innerHTML = Car.hello();
+//document.getElementById("demo").innerHTML += "<br>"+miCoche.present("Juan");
+
+</script>
+</html>

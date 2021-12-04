@@ -1,0 +1,80 @@
+<!DOCTYPE>
+<head>
+  <title>Carrusell de imagenes</title>
+    <meta charset=”UTF-8" /> 
+ </head>
+ <body >
+Introduzca nombre:<input type="text" id="miNombre" /> 
+<input type ="button" onclick="aniadir();" value="Añadir"/> 
+<div id="demo"></div>    
+<div id="div2"></div> 
+</body>
+ <script>
+class Car{
+	constructor(brand) {
+	 this._carname = brand;
+	}
+	get carname() {
+	 return this._carname;
+	}
+	set carname(x) {
+	 this._carname = x;
+	}
+	/////// métodos de clase
+	static hello(x){
+	   return "Hello " + x.carname;
+	}
+	static muestraDatos(contenedor, ...tabla){
+	    document.getElementById(contenedor).innerHTML+="<br> muestraDatos<br>";
+		for(var miCoche of tabla){
+		  document.getElementById(contenedor).innerHTML+="<br>Dato devuelto por el metodo de clase<br>" + miCoche.carname;
+		}
+	}	
+	//////////////////////////////////////
+	//// metodo de objeto ////////////////
+	//////////////////////////////////////
+	mostrarUnDato(){
+	   document.getElementById("demo").innerHTML += "<br> Dato devuelto por el metodo del objeto -- " + this._carname;	   
+	}
+}
+////////////////////////////////////////////////////////////////
+///////////////   fin de la definicion de la clase      ////////
+////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+///////          funcion fuera de la clase  /////////////
+/////////////////////////////////////////////////////////
+function aniadir(){
+	var nombre=document.getElementById("miNombre").value;
+	//misCoches[misCoches.length]=new Car(nombre);
+    misCoches.push(new Car(nombre));	
+	Car.muestraDatos("div2", misCoches[misCoches.length-1]);
+}
+
+function mostrarDatos(contenedor, ...tabla){
+    for(var coche of tabla){
+	   document.getElementById(contenedor).innerHTML+= "<br> Dato devuelto por una función <br>" + coche.carname;
+	} 
+}
+
+var mycar = new Car("Ford");
+document.getElementById("demo").innerHTML = mycar.carname;
+document.getElementById("demo").innerHTML += "<br>" + Car.hello(mycar);
+mycar.mostrarUnDato();
+
+///////////////////////////////////////////////
+//////////   Array de coches    ///////////////
+///////////////////////////////////////////////
+
+//var misCoches=[new Car("Seat"), new Car("Audi")]
+var misCoches=[];
+misCoches[0] = new Car("Seat");
+misCoches[1] = new Car("Audi");
+misCoches[2] = new Car("BMW");
+misCoches[3] = new Car("Renault");
+misCoches[0].mostrarUnDato();
+document.getElementById("demo").innerHTML += "<br>" + Car.hello(misCoches[2]);
+Car.muestraDatos("div2", misCoches[2]);
+mostrarDatos("demo", mycar, misCoches[3]);
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<head>
+  <title>Carrusell de imagenes</title>
+    <meta charset=”UTF-8" /> 
+ </head>
+ <body >
+<div id="demo"></div>    
+	
+</body>
+ <script>
+class Car {
+constructor(brand) {
+ this._carname = brand;
+}
+get carname() {
+ return this._carname;
+}
+set carname(x) {
+ this._carname = x;
+}
+}
+mycar = new Car("Ford");
+document.getElementById("demo").innerHTML = mycar.carname;
+
+
+
+</script>
+</html>

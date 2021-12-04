@@ -1,17 +1,17 @@
-div {
+.contenedor {
     display: flex;
     justify-content: center;
+    margin-top: 75px;
+}
+
+.elemento {
     margin: 0 auto;
-    width: 200px;
 }
 
-.contenedor {
-    margin-top: 50px;
-    height: 300px;
-    width: 450px;
+.sup {
+    width: 600px;
 }
 
-img {
-    height: 100%;
-    width: 100%;
+.navegador, .addImg {
+    width: 150px;
 }
