@@ -1,0 +1,45 @@
+:root {
+    --claro: #A4B3BF;
+    --oscuro: #011526;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*Fija el fondo para que no se mueva con el contenido*/
+    background-attachment: fixed;
+}
+
+.navbar > button {
+    color: beige;
+    border-color: beige;
+}
+
+.logo {
+    background-image: url(../img/logo.png);
+    background-size: contain;
+    background-position-x: right;
+    background-repeat: no-repeat;
+}
+
+::selection {
+    color: #023059;
+    background-color: #048ABF;
+}
+
+.contenido {
+    color: #011526;
+    background-color: #A4B3BF;
+}
+
+footer a {
+    color: #A4B3BF;
+    font-size: 1.5em;
+}
+
+footer a:hover {
+    color: cornsilk;
+}
+
