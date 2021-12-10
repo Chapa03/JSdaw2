@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo" style="width: 150px; height: 90px; border: 1px solid rebeccapurple;">
+        <span id="texto">Holaaaa</span>
+    </div>
+    <input type="button" value="Prueba">
+    <div id="mostrar"></div>
+    <script>
+        //Pide confirmación para abandonar una página
+        //El mensaje no se muestra
+        window.onbeforeunload = confirmarSalida;
+        function confirmarSalida() {
+            return "Vas a abandonar la página, ¿estás seguro?";
+        }
+
+        //Función anónima (sin nombre)
+        window.onbeforeunload = function () {
+            return "Vas a abandonar la página, ¿estás seguro?";
+        }
+
+        //Es lo mismo que en el ejemplo01 pero sin utilizar los atributos del div y 
+        //utilizando funciones anónimas
+        document.getElementById('demo').onmouseover = function() {document.getElementById('mostrar').innerHTML = 'Ha entrado en el DIV<br/>'}
+        document.getElementById('demo').onmouseout = function() {document.getElementById('mostrar').innerHTML = 'Ha salido del DIV<br/>'}
+        document.getElementById('demo').onmousemove = function() {document.getElementById('mostrar').innerHTML += 'Te has movido gelipotas<br/>'}
+        document.getElementById('demo').onmousedown = function() {document.getElementById('mostrar').innerHTML = 'Has hecho click<br/>'}
+        document.getElementById('demo').onmouseup = function() {document.getElementById('mostrar').innerHTML = 'Has soltado el botón<br/>'};
+
+        //Permite que esta función se cargue al haber terminado de cargar
+        //Todo el documento, por lo que JS ya conoce los elementos a los que se hace referencia
+        window.onload = function() {
+            document.getElementById('demo').onmouseover = function() {this.style.borderColor='orange';}
+            document.getElementById('demo').onmouseout = function() {this.style.borderColor='lime';}
+        }
+
+        window.onload = function() {
+            document.getElementById('demo').onmouseover = function() {resalta(this)}
+            document.getElementById('demo').onmouseout = function() {resalta(this)}
+        }
+        
+        function resalta (elemento) {
+            switch (elemento.style.borderColor) {
+                case 'silver':
+                case 'silver silver silver silver':
+                case '#c0c0c0':
+                    elemento.style.borderColor = 'black';
+                    break;
+                case 'black':
+                case 'black black black black':
+                case '#0000':
+                    elemento.style.borderColor = 'silver';
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

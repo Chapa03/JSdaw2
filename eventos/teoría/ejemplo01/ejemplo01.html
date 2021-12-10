@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Se pueden declarar acciones a eventos como parámetros de un elemento:
+            mouseover se activa el entrar en un elemento o contenedor
+            mouseout se activa al salir de un elemento o contenedor
+            mousemove se activa al mover el cursor sobre un elemento o contenedor
+            mousedown se activa al hacer clic con algún botón del ratón o pulsar espacio en un elemento o contenedor
+            mouseup se activa al soltar un botón pulsado del ratón en un elemento o contenedor
+    -->
+    <div id="demo" style="width: 150px; height: 90px; border: 1px solid rebeccapurple;" 
+        onmouseover = "document.getElementById('mostrar').innerHTML = 'Ha entrado en el DIV<br/>';"
+        onmouseout = "document.getElementById('mostrar').innerHTML = 'Ha salido del DIV<br/>';" 
+        onmousemove = "document.getElementById('mostrar').innerHTML += 'Te moviste perro!<br/>';"
+        onmousedown = "document.getElementById('mostrar').innerHTML += 'Has pulsado un botón del ratón<br/>';"
+        onmouseup = "document.getElementById('mostrar').innerHTML += 'Has soltado el botón<br/>';" 
+        >
+    </div>
+    <div id="mostrar"></div>
+</body>
+</html>
