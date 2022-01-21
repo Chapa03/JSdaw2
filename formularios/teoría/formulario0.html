@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+  <title></title>
+    <meta charset="UTF-8" /> 
+<script>
+function valida(){
+var correcto=true;
+var texto1=miFormulario.miTexto.value;
+var texto01=document.getElementById("miTexto").value;
+var hora = /^([01]\d|2[0-3]):([0-5]\d):([012345][0-9])$/;
+if (hora.test(texto1)){
+      document.getElementById("mostrar").innerHTML="La hora es correcta";
+   } 
+    else {
+	document.getElementById("mostrar").innerHTML="La hora NO es correcta";
+    correcto= false;	
+	}
+var texto2=miFormulario.miTexto2.value;
+var texto02=document.getElementById("miTexto2").value;
+var nombre = /^[A-ZÑÇÁÉÍÓÚ][A-ZÑÇÁÉÍÓÚa-zñçáéíóú]{2}[A-ZÑÇÁÉÍÓÚa-zñçáéíóú -]{0,22}$/;
+if (nombre.test(texto2)){
+      document.getElementById("mostrar").innerHTML="El nombre es correcto";
+   } 
+    else {
+	document.getElementById("mostrar").innerHTML="El nombre NO es correcto";
+    correcto=false;	
+	}
+//document.getElementById("miFormulario").submit()
+//miFormulario.submit();
+return correcto;
+}
+function valida2(){
+var correcto=true;
+var texto1=miFormulario.miTexto.value;
+var texto01=document.getElementById("miTexto").value;
+var hora = /^([01]\d|2[0-3]):([0-5]\d):([012345][0-9])$/;
+if (hora.test(texto1)){
+      document.getElementById("mostrar").innerHTML="La hora es correcta";
+   } 
+    else {
+	document.getElementById("mostrar").innerHTML="La hora NO es correcta";	
+	}
+var texto2=miFormulario.miTexto2.value;
+var texto02=document.getElementById("miTexto2").value;
+var nombre = /^[A-ZÑÇÁÉÍÓÚ][A-ZÑÇÁÉÍÓÚa-zñçáéíóú]{2}[A-ZÑÇÁÉÍÓÚa-zñçáéíóú -]{0,22}$/;
+if (nombre.test(texto2)){
+      document.getElementById("mostrar").innerHTML="El nombre es correcto";
+   } 
+    else {
+	document.getElementById("mostrar").innerHTML="El nombre NO es correcto";	
+	}
+alert("Entra en la funcion");
+//document.getElementById("miFormulario").submit()
+//miFormulario.submit();
+return true;
+}
+</script>
+ </head>
+<body >
+<p>Formulario1</p>
+<form id="miFormulario" name="miFormulario" 
+action="eRegulares1.html" method="get" 
+target="_blank" onsubmit="return valida();">
+Introduzca un Nombre:&nbsp;<input type="text" name="miTexto" id="miTexto"/><br>
+Introduzca una Hora:&nbsp;<input type="text" name="miTexto2" id="miTexto2"/><br>
+<input type="submit" value="Comprueba" id="miBoton"/>
+</form>
+<br>
+<br>
+<p>Formulario 2</p> 
+<form id="miFormulario2" name="miFormulario" 
+action="eRegulares1.html" method="get" 
+target="_blank">
+Introduzca un Nombre:&nbsp;<input type="text" name="miTexto" id="miTexto"/><br>
+Introduzca una Hora:&nbsp;<input type="text" name="miTexto2" id="miTexto2"/><br>
+<input type="button" value="Comprueba" id="miBoton" onclick="valida2();"/>
+</form>
+<div id="mostrar"></div>
+</body>
+ 
+</html>
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ejemplo01.js"></script>
+    <title>Expresiones regulares</title>
+</head>
+<body>
+    <h3>Introduce un String y ve probando las diferentes expresiones regulares:</h3>
+    <label for="mainL">String: </label>
+    <input type="text" id="mainL" placeholder="String">
+    <hr/>
+    <table>
+        <thead>
+            <tr>
+                <th>Expresión regular</th>
+                <th>Significado</th>
+                <th>Comparador</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>/a/</td>
+                <td>Letra o conjunto de letras</td>
+                <td>
+                    <input type="text" id="a" placeholder="String"/>
+                    <button onclick="comprobar(0);">Buscar</button>
+                </td>
+                <td id="res0"></td>
+            </tr>
+
+            <tr>
+                <td>/a{n}/</td>
+                <td>'a' se repite <i>n</i> veces</td>
+                <td>
+                    <input type="text" id="a" placeholder="1 Carácter"/>
+                    <input type="number" id="aN" placeholder="Nº Repeticiones" size="4"/>
+                    <button onclick="comprobar(1);">Buscar</button>
+                </td>
+                <td id="res1"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="resultado"></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="entrada">
+        <label for="matricula">Matrícula</label>
+        <input type="text" name="matricula" id="matricula" onkeyup="validarM();validar();"/>
+        <br/>    
+        <label for="telefono">Teléfono</label>
+        <input type="text" name="telefono" id="telefono" onkeyup="validarT();validar();"/>
+        <br/>
+        <label for="cp">Código Postal</label>
+        <input type="text" name="cp" id="cp" onkeyup="validarCP();validar();"/>
+        <br/>   
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" onkeyup="validarN();validar();"/>
+        <br/>
+        <label for="url">URL</label>
+        <input type="text" name="url" id="url" onkeyup="validarU();validar();"/>
+        <br/>    
+        <br/>    
+        <input type="button" name="add" value="Añadir" onclick="validar();validar();" disabled="disabled"/>
+        <br/>    
+        <br/>   
+        <textarea name="salida" id="salida" cols="30" rows="10" placeholder="Si los datos están validados, aparecerán formateados aquí al pulsar el botón 'Añadir'" readonly="readonly"></textarea>
+        <script src="ejercicio01.js"></script>
+    </form>
+</body>
+</html>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ejercicio02.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -12,9 +13,15 @@
         input para Primer caracter mayus, 3 primeros alfabéticos, se permiten ñ y ç entre 3 y 35 caracteres
         input para hh:mm:ss
     -->
-    <input type="text" id="tlf">
+    <label for="telefonoIpt">Teléfono</label>
+    <input type="text" id="telefonoIpt">
+    <br/>
+    <label for="nombreIpt">Nombre</label>
     <input type="text" id="nombreIpt">
+    <br/>
+    <label for="HoraIpt">Hora</label>
     <input type="text" id="horaIpt">
+    <br/>
     <button type="button" onclick="validar();">Validar</button>
     <div id="telefono"></div>
     <div id="nombre"></div>

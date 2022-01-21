@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="suscripcionForm">
+        <label>¿Desea suscribirse a nuestro boletín de novedades?</label><br/>
+        <input type="radio" id="yes" value="yes" name="boletin" onclick="boletinSi();"/> <label for="yes">Sí, deseo suscribirme</label>
+        <input type="radio" id="no" value="no" name="boletin" onclick="boletinNo();"/> <label for="no">No, no deseo suscribirme</label>
+        <br/>
+        <br/>
+        <fieldset>
+            <legend>Intereses:</legend>
+            <input type="checkbox" name="intereses[]" id="1"><label for="1">Abrir y cerrar la nevera de forma continuada</label><br/>
+            <input type="checkbox" name="intereses[]" id="2"><label for="2">Correr de lado</label><br/>
+            <input type="checkbox" name="intereses[]" id="3"><label for="3">Presentarte como "tu brillante meteoro oriental"</label><br/>
+            <input type="checkbox" name="intereses[]" id="4"><label for="4">Gritarle tus miedos a un palo</label>
+        </fieldset>
+    </form>
+    <script src="ejercicio04.js"></script>
+</body>
+</html>

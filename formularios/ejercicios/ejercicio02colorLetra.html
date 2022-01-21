@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+  <title></title>
+    <meta charset=”UTF-8" /> 
+<script>
+function pasaValor(){
+ miFormulario2.miTexto222.value=miFormulario2.miTexto22.value;
+}
+function habilita(valor){
+   var elementos = miFormulario2.elements;
+   //var elementos = document.miFormulario2.elements;
+   /*for (var c in elementos){  
+    if (elementos[c].type=="text"){    
+    elementos[c].disabled=valor;
+    }	
+   } */ 
+   for (var c of elementos){  
+    if (c.type=="text"){    
+       c.disabled=valor;
+    }	
+   }  
+}
+/*function deshabilita(){
+   var elementos = miFormulario2.elements;
+   //var elementos = document.miFormulario2.elements;
+   for (var c in elementos){   
+    if (elementos[c].type=="text"){
+		elementos[c].disabled=valor; 
+    }	
+   }   
+}*/
+
+//Añadir dos botones para cambiar el color de las letras a azul/rojo
+
+function color(color){
+   var elementos = miFormulario2.elements;
+   //var elementos = document.miFormulario2.elements;
+   /*for (var c in elementos){  
+    if (elementos[c].type=="text"){    
+    elementos[c].disabled=valor;
+    }	
+   } */ 
+   for (var c of elementos){  
+    if (c.type=="text"){    
+       c.style.color=color;
+    }	
+   }  
+}
+
+
+</script>
+ </head>
+<body >
+<br>
+<p>Formulario 2</p> 
+<form id="miFormulario2" name="miFormulario2" action="eRegulares1.html" method="get" 
+target="_blank">
+Introduzca un Nombre:&nbsp;<input type="text" name="miTexto22" 
+                           "id="miTexto22"/><br>
+Introduzca una Hora:&nbsp;<input type="text" name="miTexto222" 
+                          id="miTexto222" /><br>
+<input type="button" value="Habilita"  onclick="habilita(false);"  id="miBoton"/>
+<input type="button" value="Deshabilita" onclick="habilita(true);"id="miBoton"/>
+<input type="button" value="Azul" onclick="color('blue');"id="miBoton"/>
+<input type="button" value="Rojo" onclick="color('red');"id="miBoton"/>
+</form>
+<div id="mostrar"></div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+</html>
+
+
+

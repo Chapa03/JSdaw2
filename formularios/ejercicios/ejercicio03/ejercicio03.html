@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="formulario1" action="#" onsubmit="return validar();">
+        <label for="usuario" >Usuario</label>
+        <input type="text" name="usuario" onkeyup="activar();" id="usuario"/>
+        <br/>
+        <label for="pass" onkeyup="validar();">Password</label>
+        <input type="password" name="pass" disabled="disabled" id="pass" />
+        <br/>
+        <input type="submit" value="Validar" id="validar" />
+    </form>
+    <script src="ejercicio03.js"></script>
+</body>
+</html>
