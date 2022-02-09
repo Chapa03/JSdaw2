@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/script.js"></script>
+    <title>Navegador de listas</title>
+</head>
+<body>
+    <form action="" name="navegador">
+        <label for="texto">Introduzca una nueva opción</label>
+        <input type="text" name="texto" onkeyup="habilitar();"/>
+        <button type="button" name="alta" onclick="addOption();" disabled="disabled">Añadir</button>
+        <br/>
+        <select name="lista1" id="lista1" multiple="multiple">
+        </select>
+
+        <button type="button" onclick="moverSelect(1);">>></button>
+        <button type="button" onclick="moverSelect(2);"><<</button>
+        <button type="button" onclick="moverTodos(1);">>>|</button>
+        <button type="button" onclick="moverTodos(2);">|<<</button>
+        <button type="button" onclick="borrarLista(1);">X1</button>
+        <button type="button" onclick="borrarLista(2)">X2</button>
+        
+        <select name="lista2" id="lista2" multiple="multiple"></select>
+
+        <br/>
+        <button type="button" onclick="copiarSelect(1);">Copiar selección a la derecha</button>
+        <button type="button" onclick="copiarSelect(2);">Copiar selección a la izquierda</button>
+        <br/>
+        <button type="button" onclick="borrarSelect(1)">Borrar selección de la izquierda</button>
+        <button type="button" onclick="borrarSelect(2)">Borrar selección de la derecha</button>
+    </form>
+    <script src="ejercicio07.js"></script>
+</body>
+</html>
